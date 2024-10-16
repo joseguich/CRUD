@@ -1,8 +1,14 @@
 import express from "express";
-import { home } from "../controllers/paginaControllers.js";
+import {
+  home,
+  viewCreatePost,
+  createPost,
+} from "../controllers/paginaControllers.js";
 
 const router = express();
 
 router.get("/home", home);
+router.get("/desing/crear", viewCreatePost);
+router.post("/desing/crear", createPost);
 
 export default router;

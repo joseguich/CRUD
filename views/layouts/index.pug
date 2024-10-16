@@ -2,7 +2,7 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title CRUD
+    title CRUD | #{pagina}
     link(href="/css/app.css" rel="stylesheet")
 
   body(class="h-screen bg-gray-900")
@@ -10,6 +10,8 @@ html(lang="en")
       h1(class="text-white font-bold flex text-sm justify-center md:text-2xl cursor-pointer") CRUD
       nav(class="flex justify-center items-center gap-6 px-10 sm:mt-0 md:mt-0 mt-5")
         a(href="/home" class="text-white hover:text-gray-500 hover:duration-300 hover:transition-all hover:ease-in-out text-sm md:text-2xl  font-bold") Home
-        a(href="/crear" class="text-white hover:text-gray-500 hover:duration-300 hover:transition-all hover:ease-in-outtext-sm md:text-2xl font-bold") Crear
-
+        a(href="/desing/crear" class="text-white hover:text-gray-500 hover:duration-300 hover:transition-all hover:ease-in-outtext-sm md:text-2xl font-bold") Crear
+    
+    main(class="container mx-auto mt-10")
+      block contenido 
 
