@@ -3,6 +3,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title CRUD | #{pagina}
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
     link(href="/css/app.css" rel="stylesheet")
 
   body(class="h-screen bg-gray-900")
@@ -11,7 +12,18 @@ html(lang="en")
       nav(class="flex justify-center items-center gap-6 px-10 sm:mt-0 md:mt-0 mt-5")
         a(href="/home" class="text-white hover:text-gray-500 hover:duration-300 hover:transition-all hover:ease-in-out text-sm md:text-2xl  font-bold") Home
         a(href="/desing/crear" class="text-white hover:text-gray-500 hover:duration-300 hover:transition-all hover:ease-in-outtext-sm md:text-2xl font-bold") Crear
-    
+
     main(class="container mx-auto mt-10")
       block contenido 
+        if posts 
+          if posts.length
 
+            //- if posts.length
+            //-   each post in posts
+
+          else
+            h1(class="text-center flex justify-center items-center mt-24 text-white bg-indigo-600 rounded-xl shadow-lg shadow-indigo-600 hover:rotate-1 transition-all duration-500 font-bold py-2 md:py-5 md:text-2xl ") No hay publicaciones 
+
+
+block scripts
+  script(src="/js/app.js")
