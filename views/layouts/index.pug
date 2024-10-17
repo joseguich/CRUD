@@ -17,9 +17,15 @@ html(lang="en")
       block contenido 
         if posts 
           if posts.length
+            h1.text-white.text-4xl.text-center.font-bold Publicaciones
+            div(class="grid md:grid-cols-3 gap-10 mt-12")  
+              each post in posts
+                div(class="bg-gray-800 rounded-xl shadow-xl shadow-indigo-500 overflow-hidden ")
+                  img(src=`/uploads/${post.imagen}` class="w-full h-60 object-cover" )
 
-            //- if posts.length
-            //-   each post in posts
+                  div(class="p-6")
+                    h3(class="mb-5 text-white text-center text-sm md:text-xl font-bold ")=post.titulo
+                    p(class="text-white text-left text-sm md:text-xl tracking-wide leading-3  ")=post.descripcion
 
           else
             h1(class="text-center flex justify-center items-center mt-24 text-white bg-indigo-600 rounded-xl shadow-lg shadow-indigo-600 hover:rotate-1 transition-all duration-500 font-bold py-2 md:py-5 md:text-2xl ") No hay publicaciones 
